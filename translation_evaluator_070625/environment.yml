@@ -1,0 +1,13 @@
+name: translation-evaluator
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.10
+  - numpy
+  - pandas
+  - scikit-learn
+  - pip
+  - pip:
+      - python-docx
+# Добавьте сюда другие необходимые библиотеки, если они используются в проекте
