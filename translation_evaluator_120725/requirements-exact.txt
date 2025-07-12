@@ -1,0 +1,44 @@
+# Файл с точными версиями пакетов для полной воспроизводимости
+# Создан на основе рабочего окружения Translation Evaluator
+
+# Основные зависимости
+streamlit==1.28.0
+torch==2.7.1
+transformers==4.53.1
+pandas==1.5.3
+numpy==1.26.4
+
+# Обработка данных
+python-docx==0.8.11
+openpyxl==3.1.2
+xlrd==2.0.1
+xlsxwriter==3.1.2
+chardet==5.2.0
+
+# Машинное обучение
+scikit-learn==1.2.2
+sacrebleu==2.3.1
+datasets==2.20.0
+nltk==3.8.1
+sentencepiece==0.1.99
+
+# Визуализация
+matplotlib==3.7.1
+seaborn==0.12.2
+plotly==5.15.0
+
+# Утилиты
+tqdm==4.65.0
+python-dotenv==1.0.0
+safetensors==0.3.1
+protobuf==3.20.0
+reportlab==4.0.4
+langdetect==1.0.9
+nest-asyncio==1.5.6
+accelerate==0.20.0
+pydantic==2.0.0
+fpdf2==2.7.0
+
+# Torch дополнительные пакеты
+torchvision==0.22.1
+torchaudio==2.7.1

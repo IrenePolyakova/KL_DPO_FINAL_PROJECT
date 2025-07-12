@@ -1,0 +1,81 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "translation-evaluator"
+version = "0.1.0"
+description = "Tool for evaluating machine translation quality"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {file = "LICENSE"}
+authors = [
+    {name = "Translation Evaluator Contributors", email = ""}
+]
+dependencies = [
+    "streamlit>=1.24.0",
+    "torch>=2.0.0",
+    "transformers>=4.30.0",
+    "sacrebleu>=2.3.1",
+    "pandas>=1.5.3",
+    "numpy>=1.24.3",
+    "python-docx>=0.8.11",
+    "matplotlib>=3.7.1",
+    "seaborn>=0.12.2",
+    "scikit-learn>=1.2.2",
+    "tqdm>=4.65.0",
+    "python-dotenv>=1.0.0",
+    "safetensors>=0.3.1",
+    "sentencepiece>=0.1.99",
+    "protobuf>=3.20.0",
+    "reportlab>=4.0.4"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+    "black>=22.0.0",
+    "isort>=5.0.0",
+    "flake8>=4.0.0",
+    "mypy>=0.900"
+]
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra -q --cov=translation_utils"
+testpaths = [
+    "tests"
+]
+
+[tool.black]
+line-length = 100
+target-version = ['py38']
+include = '\.pyi?$'
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+line_length = 100
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+check_untyped_defs = true
+
+[[tool.mypy.overrides]]
+module = [
+    "torch.*",
+    "transformers.*",
+    "sacrebleu.*",
+    "pandas.*",
+    "numpy.*",
+    "matplotlib.*",
+    "seaborn.*",
+    "tqdm.*",
+    "python-docx.*",
+    "streamlit.*"
+]
+ignore_missing_imports = true 
