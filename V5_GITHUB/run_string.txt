@@ -1,0 +1,12 @@
+torchrun --nproc_per_node=2 train_marian_multi_gpu.py \
+  --csv /home/nikita/V5/approved_cleaned_240625_1_26062025_fixed.csv \
+  --token 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 \
+  --model_name Helsinki-NLP/opus-mt-ru-en \
+  --repo_name my-marian-ru-en \
+  --epochs 1 \
+  --batch_size 32 \
+  --max_length 256 \
+  --fp16 \
+  --gradient_checkpointing \
+  --output_dir ./my_output_01 \
+  --dataloader_num_workers 8

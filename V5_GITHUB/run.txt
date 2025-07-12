@@ -1,0 +1,3 @@
+conda create -n V5 python=3.10 -y
+conda activate V5
+pip install -r requirements.txt

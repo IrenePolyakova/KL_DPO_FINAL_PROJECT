@@ -1,0 +1,18 @@
+# Основные зависимости для обучения
+torch>=2.0.0
+transformers>=4.30.0
+datasets>=2.10.0
+huggingface_hub>=0.15.0
+accelerate>=0.20.0
+
+# Streamlit и визуализация
+streamlit>=1.28.0
+plotly>=5.15.0
+pandas>=2.0.0
+
+# Мониторинг системы
+psutil>=5.9.0
+nvidia-ml-py3>=7.352.0
+
+# Дополнительные утилиты
+scikit-learn>=1.3.0
